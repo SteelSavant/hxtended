@@ -23,7 +23,7 @@ class MathExt
     }
 
     /**
-            Same as abs, but takes and returns an integer
+        Same as abs, but takes and returns an integer
     **/
 
     public static inline function iabs(math:Class<Math>, v:Int):Int
@@ -32,8 +32,8 @@ class MathExt
     }
 
     /**
-            Same as max, but takes two integers and returns
-            an integer
+        Same as max, but takes two integers and returns
+        an integer
     **/
 
     public static inline function imax(math:Class<Math>, a:Int, b:Int):Int
@@ -42,8 +42,8 @@ class MathExt
     }
 
     /**
-            Same as min, but takes two integers and returns
-            an integer
+        Same as min, but takes two integers and returns
+        an integer
     **/
 
     public static inline function imin(math:Class<Math>, a:Int, b:Int):Int
@@ -52,8 +52,8 @@ class MathExt
     }
 
     /**
-            Returns a random integer value between lower (inclusive)
-            and upper (exclusive)
+        Returns a random integer value between lower (inclusive)
+        and upper (exclusive)
     **/
 
     public static inline function randomInt(math:Class<Math>,lower:Int, upper:Int):Int
@@ -62,7 +62,7 @@ class MathExt
     }
 
     /**
-            Returns a random boolean value
+        Returns a random boolean value
     **/
 
     public static inline function randomBool(math:Class<Math>):Bool
@@ -75,8 +75,8 @@ class MathExt
         return collection[randomInt(math, 0, collection.length)];
     }
     /**
-            Returns 1 if passed value is positive, -1 
-            if it is negative, and 0 otherwise.
+        Returns 1 if passed value is positive, -1 
+        if it is negative, and 0 otherwise.
     **/
 
     public static inline function sign(math:Class<Math>, v:Float):Int
@@ -90,8 +90,8 @@ class MathExt
     }
 
     /**
-            Returns true if both values are approximately equal 
-            within the range of epsilon, false otherwise
+        Returns true if both values are approximately equal 
+        within the range of epsilon, false otherwise
     **/
 
     public static inline function approx(math:Class<Math>, a:Float, b:Float, epsilon:Float = 0.001):Bool
