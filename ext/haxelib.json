@@ -1,0 +1,11 @@
+{
+    "name": "haxetended",
+    "url": "https://github.com/SteelSavant/haxetended.git",
+    "license": "MIT",
+    "tags": [],
+    "description": "Useful extensions on the Haxe standard library",
+    "version": "0.0.1",
+    "releasenote": "Initial release, not muh to see yet",
+    "contributors": ["steelsavant"],
+    "dependencies": {}
+}
