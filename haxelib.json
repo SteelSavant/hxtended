@@ -1,11 +1,11 @@
 {
     "name": "haxetended",
-    "url": "https://github.com/SteelSavant/haxetended.git",
+    "url": "https://github.com/SteelSavant/hxtended.git",
     "license": "MIT",
     "tags": [],
     "description": "Useful extensions on the Haxe standard library",
-    "version": "0.0.1",
-    "releasenote": "Initial release, not muh to see yet",
+    "version": "0.0.2",
+    "releasenote": "Math and Lamba reasonably extended",
     "contributors": ["steelsavant"],
     "dependencies": {}
 }
