@@ -1,9 +1,11 @@
 package ext;
 
+import ext.Lazy;
 using ext.MathExt;
 using Lambda;
 
-class LambdaExt
+@:forwardStatics(mapi, exists)
+abstract LambdaExt(Lambda)
 {
     /**
         Like filter, but also passes the index of the element being compared
@@ -18,6 +20,17 @@ class LambdaExt
                 arr.push(x);
         return arr;
     }
+
+    public static function lazyMap<T, R>(iter:Iterable<T>, fun:(elem:T)->R):Array<Lazy<R>>
+    {
+        return Lambda.map(iter, (x)->Lazy.fromFunc(fun.bind(x)));
+    }
+
+    public static function lazyMapi<T, R>(iter:Iterable<T>, fun:(index:Int, elem:T)->R):Array<Lazy<R>>
+    {
+        return Lambda.mapi(iter, (i, x)->Lazy.fromFunc(fun.bind(i, x)));
+    }
+
 
     /**
         Returns an array containing one of each element from source
