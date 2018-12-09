@@ -1,3 +1,5 @@
+package haxetended;
+
 @:pure
 class IntExt
 {
