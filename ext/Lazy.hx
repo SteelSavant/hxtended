@@ -1,7 +1,7 @@
 package ext;
 
 //currently fails due to what is apparently a Haxe 4 regression
-
+//This might be possible with @:using annotation from Haxe 4.0.5 preview
 abstract Lazy<T>(LazySlot<T>)
 {
     private inline function new(slot:LazySlot<T>)

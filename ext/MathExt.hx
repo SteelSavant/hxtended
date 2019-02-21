@@ -111,6 +111,15 @@ class IntExt
     {
         return Std.int(a / b);
     }
+
+    /**
+        Static extension for true modulo
+    **/
+
+    public static inline function mod(x:Int, n:Int):Int
+    {
+        return (x % n + n) % n;
+    }
 }
 
 @:pure
