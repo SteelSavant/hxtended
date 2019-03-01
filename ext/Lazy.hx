@@ -1,7 +1,5 @@
 package ext;
 
-//currently fails due to what is apparently a Haxe 4 regression
-//This might be possible with @:using annotation from Haxe 4.0.5 preview
 abstract Lazy<T>(LazySlot<T>)
 {
     private inline function new(slot:LazySlot<T>)
@@ -15,6 +13,11 @@ abstract Lazy<T>(LazySlot<T>)
     @:from static public inline function fromValue<T>(v:T):Lazy<T>
     return new Lazy(Value(v));
 
+    @:to public inline function toValue():T 
+    {
+        return get();
+    }
+
     @:to public inline function get():T
     {
         switch (this) 
@@ -27,6 +30,13 @@ abstract Lazy<T>(LazySlot<T>)
                 return v;
         }
     }
+    // Currently uses reflection and returns dynamic. Twould be nice if 
+    // static typing were possible.
+    @:op(A.B) public inline function dotOp(access)
+    {
+        return Reflect.field(get(), access);
+    }
+
 }
 
 //consider manually forwarding all fields so they return LazyArrays
