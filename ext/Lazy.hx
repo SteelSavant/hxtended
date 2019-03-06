@@ -30,12 +30,12 @@ abstract Lazy<T>(LazySlot<T>)
                 return v;
         }
     }
-    // Currently uses reflection and returns dynamic. Twould be nice if 
-    // static typing were possible.
-    @:op(A.B) public inline function dotOp(access)
-    {
-        return Reflect.field(get(), access);
-    }
+    // Currently uses reflection and returns dynamic. Add back in
+    // if static typing for field access becomes possible;
+    // @:op(A.B) public inline function dotOp(access)
+    // {
+    //     return Reflect.field(get(), access);
+    // }
 
 }
 

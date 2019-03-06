@@ -3,7 +3,6 @@ package ext;
 @:pure
 class MathExt
 {
-
     /**
         Max value of int; not guaranteed to be accurate
     **/
@@ -49,6 +48,15 @@ class MathExt
     public static inline function imin(math:Class<Math>, a:Int, b:Int):Int
     {
         return a - b > 0 ? b : a;
+    }
+
+    /**
+        Forces the value [a] inside the ranges [min] and [max].
+    **/
+
+    public static inline function clamp(math:Class<Math>, a:Float, min:Float, max:Float)
+    {
+        return Math.max(Math.min(a, max), min);
     }
 
     /**
