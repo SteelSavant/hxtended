@@ -66,7 +66,7 @@ class MathExt
 
     public static inline function randomInt(math:Class<Math>,lower:Int, upper:Int):Int
     {
-        return lower + Math.floor(Math.random() *  upper - lower); 
+        return lower + Math.floor(Math.random() *  (upper - lower)); 
     }
 
     /**
@@ -78,7 +78,7 @@ class MathExt
         return Math.random() < 0.5;
     }
 
-    public static inline function randomChoice<T>(math:Class<Math>, collection:Array<T>)
+    public static inline function randomChoice<T>(math:Class<Math>, collection:Array<T>):T
     {
         return collection[randomInt(math, 0, collection.length)];
     }
